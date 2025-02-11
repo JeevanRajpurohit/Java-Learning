@@ -1,0 +1,26 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+        <!-- JDBC Connection Settings -->
+        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/hibernate_demo?useSSL=false</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">Jeevan@1107</property>
+
+        <!-- Hibernate Settings -->
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</property>
+        <property name="hibernate.show_sql">true</property>
+        <!--        if i write create it will again create new table.-->
+        <property name="hibernate.hbm2ddl.auto">create</property>
+
+
+        <!-- Mapping Resource -->
+        <mapping class="org.example.Student"/>
+        <mapping class="org.example.Certificate"/>
+        <mapping class="oneTooneLearning.Question"/>
+        <mapping class="oneTooneLearning.Answer"/>
+    </session-factory>
+</hibernate-configuration>
